@@ -59,5 +59,22 @@ describe("arabs") do
   it("converts IVs and IXs, etc properly") do
     arabs("IV").should(eq(4))
   end
-
+  it("converts IVs and IXs, etc properly") do
+    arabs("XL").should(eq(40))
+  end
+  it("converts IVs and IXs, etc properly") do
+    arabs("XC").should(eq(90))
+  end
+  it("converts IVs and IXs, etc properly") do
+    arabs("CD").should(eq(400))
+  end
+  it("converts IVs and IXs, etc properly") do
+    arabs("CM").should(eq(900))
+  end
+  it("converts IVs and IXs, etc properly") do
+    arabs("XCIX").should(eq(99))
+  end
+  it("converts IVs and IXs, etc properly") do
+    arabs("MMMCMXCIX").should(eq(3999))
+  end
 end
