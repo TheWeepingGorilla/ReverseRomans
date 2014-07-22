@@ -56,4 +56,8 @@ describe("arabs") do
   it("converts the string MD to 1500") do
     arabs("MD").should(eq(1500))
   end
+  it("converts IVs and IXs, etc properly") do
+    arabs("IV").should(eq(4))
+  end
+
 end

@@ -68,10 +68,17 @@ end
 
 def arabs (numeral)
   total = 0
+  previousNum = 0
   numeral_value = {"I" => 1, "V" => 5, "X" => 10, "L" => 50, "C" => 100, "D" => 500, "M" => 1000}
   numeral.reverse.each_char do | num |
-    total = total + numeral_value[num]
+    if previousNum > numeral_value[num]
+        total -= numeral_value[num]
+        previousNum = numeral_value[num]
+    else
+        total += numeral_value[num]
+        previousNum = numeral_value[num]
     end
+  end
   return total
 end
 
